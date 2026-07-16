@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechZone - Tu tienda tecnológica de confianza</title>
+  <meta name="description" content="Descubre smartphones, laptops, audio, smartwatches y gaming con ofertas exclusivas. Catálogo interactivo, carrito de compras y cupones de descuento en TechZone.">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="TechZone - Tu tienda tecnológica de confianza">
+  <meta property="og:description" content="Smartphones, laptops, audio y gaming con ofertas exclusivas. Catálogo interactivo y cupones de descuento.">
+  <meta property="og:image" content="https://fabriciosalasarcornetero-design.github.io/Fundamento-de-tecnolog-a-web-RA3/logo.png">
+  <meta property="og:url" content="https://fabriciosalasarcornetero-design.github.io/Fundamento-de-tecnolog-a-web-RA3/">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="TechZone - Tu tienda tecnológica de confianza">
+  <meta name="twitter:description" content="Descubre smartphones, laptops, audio, smartwatches y gaming con ofertas exclusivas.">
+  <meta name="twitter:image" content="https://fabriciosalasarcornetero-design.github.io/Fundamento-de-tecnolog-a-web-RA3/logo.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <meta name="theme-color" content="#0b0a17">
+</head>
+
+
+<body>
+
+  <header class="navbar">
+    <a href="#inicio" class="logo-area" id="logoArea" aria-label="Ir al inicio - TechZone">
+      <img src="logo.png" alt="Logo" class="logo" width="60" height="60">
+      <div>
+        <h1>TechZone</h1>
+        <p>Tu tienda tecnológica de confianza</p>
+      </div>
+    </a>
+
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#productos">Productos</a>
+      <a href="#quienes-somos">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+
+    <button id="btnCarrito" type="button">🛒 <span id="contador">0</span></button>
+  </header>
+
+  <section class="hero" id="inicio">
+    <div class="hero-content">
+      <h2>Tecnología que Impulsa tu Futuro</h2>
+      <p>Descubre smartphones, audio, accesorios y mucho más con ofertas exclusivas.</p>
+      <div class="hero-buttons">
+        <a href="#productos" class="btn-primary">Comprar ahora</a>
+        <a href="#ofertas" class="btn-secondary" id="btnVerOfertas">🔥 Ver ofertas</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="categorias" id="seccionesProductos">
+    <div class="categoria-card reveal" data-categoria="Celulares" role="button" tabindex="0"> Celulares</div>
+    <div class="categoria-card reveal" data-categoria="Laptops" role="button" tabindex="0"> Laptops</div>
+    <div class="categoria-card reveal" data-categoria="Audio" role="button" tabindex="0"> Audio</div>
+    <div class="categoria-card reveal" data-categoria="Smartwatch" role="button" tabindex="0"> Smartwatch</div>
+    <div class="categoria-card reveal" data-categoria="Gaming" role="button" tabindex="0"> Gaming</div>
+  </section>
+
+  <section id="quienes-somos" class="info">
+    <h2>¿Quiénes Somos?</h2>
+    <p>En <strong>TechZone</strong> somos una empresa dedicada a la comercialización de productos tecnológicos de alta
+      calidad, comprometida con ofrecer a nuestros clientes una experiencia de compra segura, rápida y confiable. Nos
+      especializamos en la venta de smartphones, laptops, accesorios, dispositivos de audio, equipos gaming y otros
+      productos innovadores de las marcas más reconocidas del mercado.
+      Nuestra misión es acercar la tecnología a las personas, brindando soluciones que faciliten su vida diaria, el
+      estudio, el trabajo y el entretenimiento. Nos esforzamos por ofrecer productos originales, precios competitivos y
+      un servicio de atención al cliente que garantice la satisfacción de quienes confían en nosotros.
+      Aspiramos a convertirnos en una de las tiendas tecnológicas de mayor confianza en el país, destacándonos por
+      nuestra innovación, responsabilidad y compromiso con la calidad. En TechZone creemos que la tecnología es una
+      herramienta para impulsar el progreso y conectar a las personas con un mundo de nuevas oportunidades.
+    <div class="cards">
+      <article class="reveal">
+        <h3> Envíos rápidos</h3>
+        <p>Entregas a todo el Perú.</p>
+      </article>
+      <article class="reveal">
+        <h3> Garantía</h3>
+        <p>Productos originales.</p>
+      </article>
+      <article class="reveal">
+        <h3> Soporte</h3>
+        <p>Asesoría personalizada.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="ofertas">
+    <div class="seccion-header">
+      <div>
+        <p class="eyebrow">Catálogo premium</p>
+        <h2> Ofertas tecnológicas</h2>
+      </div>
+      <p>Las mejores ofertas las encuentras en TechZone tu tienda de tecnología de confianza :D.</p>
+    </div>
+
+    <div class="toolbar">
+      <input type="text" id="buscador" placeholder="Buscar productos...">
+      <div id="filtrosCategorias" class="filtros"></div>
+      <div class="toolbar-fila-inferior">
+        <p id="resultadoCantidad" class="resultado-cantidad"></p>
+        <select id="ordenarProductos" class="selector-orden">
+          <option value="relevancia">Ordenar por: Relevancia</option>
+          <option value="precio-asc">Precio: menor a mayor</option>
+          <option value="precio-desc">Precio: mayor a menor</option>
+          <option value="nombre-asc">Nombre: A-Z</option>
+          <option value="nombre-desc">Nombre: Z-A</option>
+        </select>
+      </div>
+      <p id="tipoCambioInfo" class="tipo-cambio-info" aria-live="polite">Cargando tipo de cambio…</p>
+    </div>
+
+    <div id="productos" class="contenedor"></div>
+  </section>
+
+  <section id="contacto" class="contacto">
+    <h2>Contáctanos</h2>
+    <!-- Módulo de formulario interactivo construido con React (ver contacto-react.js) -->
+    <div id="contactoRoot"></div>
+  </section>
+
+  <div id="alertaFlotante" class="alerta-flotante" role="status" aria-live="polite"></div>
+
+  <footer>
+    <h3>TechZone</h3>
+    <p>Chiclayo - Perú</p>
+    <p>contacto@techzone.pe</p>
+    <p>© 2026 TechZone. Todos los derechos reservados.</p>
+  </footer>
+
+  <div id="mensaje" class="mensaje"></div>
+
+  <div id="modalCarrito" class="modal">
+    <div class="modal-contenido">
+      <div class="modal-header">
+        <div>
+          <p class="eyebrow">Tu compra</p>
+          <h2>Carrito</h2>
+        </div>
+        <span class="cerrar">&times;</span>
+      </div>
+      <ul id="lista"></ul>
+      <div class="cupon-box">
+        <input id="cupon" placeholder="Ingresa tu cupón TECH10">
+        <button class="btn-cupon" type="button" onclick="aplicarCupon()">Aplicar</button>
+      </div>
+      <div class="resumen-carrito">
+        <h3 id="descuento"></h3>
+        <h2 id="total"></h2>
+        <p id="totalUsd" class="carrito-total-usd"></p>
+      </div>
+      <div class="modal-actions">
+        <button type="button" onclick="vaciar()">Vaciar carrito</button>
+        <button type="button" onclick="finalizarCompra()">Finalizar compra</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- React (framework Front-End) para el módulo de formulario interactivo -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="contacto-react.js"></script>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
